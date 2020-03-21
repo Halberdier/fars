@@ -20,7 +20,3 @@ single tibble.
 Checks for year validity.
 Used by \code{fars_summarize_years} and \code{fars_map_state}.
 }
-\examples{
-fars_read_years(c(2013, 2015))
-
-}

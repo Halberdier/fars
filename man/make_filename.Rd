@@ -21,7 +21,3 @@ A string with the full filename.
 Used by \code{fars_read_years} and \code{fars_map_state},
 before \code{fars_read}.
 }
-\examples{
-make_filename(2014)
-
-}

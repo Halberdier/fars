@@ -18,7 +18,3 @@ Checks file for existence in the current
 directory and returns its content as a tibble.
 Used by \code{fars_read_years} and \code{fars_map_state}.
 }
-\examples{
-fars_read("accident_2014.csv.bz2")
-
-}

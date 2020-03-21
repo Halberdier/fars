@@ -9,9 +9,6 @@
 #'
 #' @return A tibble with the full data file contents
 #'
-#' @examples
-#' fars_read("accident_2014.csv.bz2")
-#'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
 #' 
@@ -38,12 +35,11 @@ fars_read <- function(filename) {
 #'
 #' @return A string with the full filename.
 #'
-#' @examples
-#' make_filename(2014)
-#'
 make_filename <- function(year) {
         year <- as.integer(year)
-        sprintf("accident_%d.csv.bz2", year)
+        ## sprintf("accident_%d.csv.bz2", year)
+        file <- sprintf("accident_%d.csv.bz2", year)
+        system.file("extdata", file, package="fars")
 }
 
 #' Helper function to select months from a year list.
@@ -58,9 +54,6 @@ make_filename <- function(year) {
 #'
 #' @return A tibble with one row per accident and
 #' columns year and MONTH reporting the accident date.
-#'
-#' @examples
-#' fars_read_years(c(2013, 2015))
 #'
 #' @importFrom dplyr mutate select
 #'
